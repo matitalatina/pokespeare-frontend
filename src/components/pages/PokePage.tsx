@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Button from '../atoms/Button';
 import Input from '../atoms/Input';
@@ -7,6 +7,7 @@ import Logo from '../atoms/Logo';
 import ParticlesBackground from '../atoms/ParticlesBackground';
 import Small from '../atoms/Small';
 import PageTemplate from '../templates/PageTemplate';
+import useDownloadPokemon from '../../hooks/dowloadPokemon.hook';
 
 const SpacedInput = styled(Input)`
   margin: 32px 0;
@@ -16,7 +17,10 @@ const SpacedButton = styled(Button)`
   margin: 0 0 16px 0;
 `;
 
+
 const PokePage = () => {
+  const [pokemonInput, setPokemonInput] = useState('');
+  const { downloadedPokemon, fetchPokemon } = useDownloadPokemon();
   return (
     <PageTemplate
       header={<Logo />}
@@ -27,13 +31,16 @@ const PokePage = () => {
       }
       contentCentered
     >
-      <form onSubmit={(event) => {}}>
-      <SpacedInput type="text" value="" onChange={(event) => {}} placeholder="Pokémon..."></SpacedInput>
+      <form onSubmit={(event) => fetchPokemon(pokemonInput)}>
+        <SpacedInput type="text" value={pokemonInput} onChange={(event) => setPokemonInput(event.target.value)} placeholder="Pokémon..."></SpacedInput>
       </form>
-      <SpacedButton type="button" onClick={() => {}}>Find Pokémon!</SpacedButton>
+      <SpacedButton type="button" onClick={() => { }}>Find Pokémon!</SpacedButton>
+      <span>{downloadedPokemon.status} {downloadedPokemon.response}</span>
       <ParticlesBackground />
     </PageTemplate>
   );
 }
+
+
 
 export default PokePage;

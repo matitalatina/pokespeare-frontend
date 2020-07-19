@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.2",
+    "inversify": "^5.0.1",
+    "lodash": "^4.17.19",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "react-tsparticles": "^1.17.1",
+    "reflect-metadata": "^0.1.13",
     "styled-components": "^5.1.1",
-    "styled-tools": "^1.7.2"
+    "styled-tools": "^1.7.2",
+    "ts-mockito": "^2.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,14 +37,15 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.1",
-    "typescript": "^3.9.7",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "@types/jest": "^24.9.1",
+    "@types/lodash": "^4.14.157",
     "@types/node": "^12.12.50",
     "@types/react": "^16.9.43",
-    "@types/react-dom": "^16.9.8"
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.1",
+    "typescript": "^3.9.7"
   }
 }
