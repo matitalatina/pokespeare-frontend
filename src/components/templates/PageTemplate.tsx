@@ -22,13 +22,10 @@ const Content = styled.section`
   width: 100%;
   box-sizing: border-box;
   margin: 2rem auto;
-`
-
-const ContentCentered = styled(Content)`
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
 `
 
@@ -52,7 +49,7 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = ({
   return (
     <Wrapper {...props}>
       {header && <Header>{header}</Header>}
-      {contentCentered ? <ContentCentered>{children}</ContentCentered> : <Content>{children}</Content>}
+      <Content>{children}</Content>
       {footer && <Footer>{footer}</Footer>}
     </Wrapper>
   )

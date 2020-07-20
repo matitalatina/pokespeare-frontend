@@ -6,13 +6,13 @@ describe('Config', () => {
   const url = 'https://url.com';
 
   beforeEach(() => {
-    oldUrl = process.env.BACKEND_URL || '';
-    process.env.BACKEND_URL = url;
+    oldUrl = process.env.REACT_APP_BACKEND_URL || '';
+    process.env.REACT_APP_BACKEND_URL = url;
     config = new Config();
   });
 
   afterEach(() => {
-    process.env.BACKEND_URL = oldUrl;
+    process.env.REACT_APP_BACKEND_URL = oldUrl;
   });
 
   it('should get backend url', () => {

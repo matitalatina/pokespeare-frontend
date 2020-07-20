@@ -1,7 +1,6 @@
 import { injectable } from "inversify";
 import { uniq } from 'lodash';
 
-@injectable()
 export default class FavoriteStore {
   favoriteKey = 'pokespeare.favorite';
 

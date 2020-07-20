@@ -4,7 +4,7 @@ import container from "../ioc/inversify.config";
 import { TYPES } from "../ioc/types";
 import { useState } from "react";
 
-interface PokemonDownload {
+export interface PokemonDownload {
   status: 'NOT_YET' | 'LOADING' | 'SUCCESS' | 'ERROR';
   response: PokemonResponse | null;
   errorResponse: AxiosError | null;
@@ -36,6 +36,7 @@ export default function useDownloadPokemon(): PokemonDownloadHook {
         errorResponse: null,
       });
     } catch (e) {
+      console.log(e);
       setDownload({
         status: 'ERROR',
         response: null,

@@ -35,7 +35,11 @@ type Theme = {
   sizes: {
     maxWidth: string,
     spacer: number,
-  }
+    borderRadius: string,
+  },
+  speed: {
+    short: string,
+  },
 };
 
 const theme: Theme = {
@@ -64,6 +68,10 @@ const theme: Theme = {
   sizes: {
     maxWidth: '1100px',
     spacer: 8,
+    borderRadius: '15px',
+  },
+  speed: {
+    short: '0.3s',
   },
 }
 

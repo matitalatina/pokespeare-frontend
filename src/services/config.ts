@@ -1,11 +1,8 @@
-import { injectable } from "inversify";
-
-@injectable()
 export default class Config {
   get backendUrl(): string {
-    const url = process.env.BACKEND_URL;
+    const url = process.env.REACT_APP_BACKEND_URL;
     if (!url) {
-      throw new Error('BACKEND_URL not defined')
+      throw new Error('REACT_APP_BACKEND_URL not defined')
     }
     return url;
   }

@@ -6,16 +6,15 @@ const Input = styled.input`
   font-size: ${theme.fonts.sizes.big};
   background-color: rgba(0, 0, 0, 0.1);
   border: solid 1px rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
+  border-radius: ${theme.sizes.borderRadius};
   color: white;
   padding: 16px;
   outline: none;
   transition: all 0.3s;
-  min-width: 500px;
   text-align: center;
-
+  box-sizing: border-box;
+  
   @media screen and (max-width: 600px) {
-    min-width: 250px;
     font-size: ${theme.fonts.sizes.normal};
   }
 
