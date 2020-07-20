@@ -26,7 +26,7 @@ const Favorites = ({ favorites, onClick, onRemove }: FavoritesProp) => {
   }
   return (
     <Wrapper>
-      {favorites.map(f => <Chip onClick={() => onClick(f)} onRemove={() => onRemove(f)}>{f}</Chip>)}
+      {favorites.map(f => <Chip key={f} onClick={() => onClick(f)} onRemove={() => onRemove(f)}>{f}</Chip>)}
     </Wrapper>
   );
 }

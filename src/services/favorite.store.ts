@@ -1,4 +1,3 @@
-import { injectable } from "inversify";
 import { uniq } from 'lodash';
 
 export default class FavoriteStore {
