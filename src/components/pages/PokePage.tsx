@@ -74,7 +74,7 @@ const PokePage = () => {
           pokemonDownload={downloadedPokemon}
           action={downloadedPokemon.response?.name &&
             <Button type="button" round title="Toggle favorite" onClick={() => toggleFavorite(downloadedPokemon.response?.name || '')}>
-              &nbsp;{isPokemonInFavorites ? '💔' : '❤️'}
+              {isPokemonInFavorites ? '💔' : '❤️'}
             </Button>} />
       </LimitWidth>
     </PageTemplate>
