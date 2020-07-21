@@ -1,8 +1,14 @@
 # PokéSpeare Frontend
 
+## Requirements
+
+- [Node.js 12](https://nodejs.org/).
+- [Docker](https://www.docker.com/): if you want to start inside docker.
+
 ## Getting started
 
-See the available scripts below.
+Add `REACT_APP_BACKEND_URL=<YOUR_BACKEND_URL>` environment variable to point API calls to the backend.
+After that, see the available scripts below.
 
 ## Notes
 
@@ -13,6 +19,21 @@ See the available scripts below.
 - In `.env` you can change the backend URL.
 - This repo has Continuous Deployment enabled. Every push on master goes straight to [https://pokespeare.mattianatali.dev/](https://pokespeare.mattianatali.dev/). I used [netlify](https://www.netlify.com/) to do that.
 - If you want to see the full picture, please see the [docker compose repository](https://github.com/matitalatina/pokespeare-docker).
+- The `Dockerfile` uses multi-stage builds to optimize space.
+
+
+## Docker
+
+If you want also the backend, please see the [PokéSpeare docker repository](https://github.com/matitalatina/pokespeare-docker).
+
+```bash
+# Build
+docker build . -t pokespeare-frontend --build-arg 'REACT_APP_BACKEND_URL=<YOUR_BACKEND_URL>'
+
+# Run
+docker run -p 80:80 pokespeare-frontend
+```
+
 
 ## Available Scripts
 
