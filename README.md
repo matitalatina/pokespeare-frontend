@@ -1,4 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PokéSpeare Frontend
+
+## Getting started
+
+See the available scripts below.
+
+## Notes
+
+- All the business logic is tested using [TDD](https://en.wikipedia.org/wiki/Test-driven_development).
+- I created the components using [Atomic Design Methodology](https://bradfrost.com/blog/post/atomic-web-design/).
+- I used [InversifyJS](https://github.com/inversify/InversifyJS) to achieve [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control), this simplified testing and help to build decoupled classes.
+- I used only functional components. To manage the state I used [hooks](https://en.reactjs.org/docs/hooks-intro.html).
+- In `.env` you can change the backend URL.
+- This repo has Continuous Deployment enabled. Every push on master goes straight to [https://pokespeare.mattianatali.dev/](https://pokespeare.mattianatali.dev/). I used [netlify](https://www.netlify.com/) to do that.
+- If you want to see the full picture, please see the [docker compose repository](https://github.com/matitalatina/pokespeare-docker).
 
 ## Available Scripts
 
@@ -26,19 +40,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

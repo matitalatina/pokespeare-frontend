@@ -52,7 +52,7 @@ const PokePage = () => {
       header={<Logo />}
       footer={
         <Small transparent centered>
-          Made with <span role="img" aria-label="Heart" aria-labelledby="">❤️</span> by <Link href="https://www.mattianatali.it" target="_blank">Mattia Natali</Link> · <Link href="https://github.com/matitalatina/pokespeare-frontend" target="_blank">Source code</Link>
+          Made with <span role="img" aria-label="Heart" aria-labelledby="">❤️</span> by <Link href="https://blog.mattianatali.dev" target="_blank">Mattia Natali</Link> · <Link href="https://github.com/matitalatina/pokespeare-docker" target="_blank">Source code</Link>
         </Small>
       }
     >
